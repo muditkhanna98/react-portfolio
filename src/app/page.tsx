@@ -51,7 +51,7 @@ import { LuFileCode2, LuList } from "react-icons/lu";
 import { TiCss3 } from "react-icons/ti";
 
 import Image from "next/image";
-import memoji from "../../public/my-memoji.png";
+import memoji from "../public/my-memoji.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
