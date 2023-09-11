@@ -28,7 +28,6 @@ import {
   SiAwslambda,
   SiAxios,
   SiBootstrap,
-  SiCss3,
   SiDotnet,
   SiExpress,
   SiHtml5,
@@ -51,7 +50,7 @@ import { LuFileCode2, LuList } from "react-icons/lu";
 import { TiCss3 } from "react-icons/ti";
 
 import Image from "next/image";
-import memoji from "../public/my-memoji.png";
+import memoji from "../public/my-memoji.PNG";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -79,8 +78,9 @@ export default function Home() {
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500
                  text-white px-4 py-2 rounded-md ml-8"
-                  href="../public/"
-                  download="Mudit-Khanna-Resume.pdf"
+                  href="/Mudit-Khanna-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Resume
                 </a>
