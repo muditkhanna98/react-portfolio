@@ -53,7 +53,7 @@ import Image from "next/image";
 import memoji from "../../public/my-memoji.png";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleEmailClick = () => {
     window.location.href = `mailto:muditkhanna998@gmail.com`;
@@ -61,17 +61,17 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className=" px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons dark:text-white">
+            <h1 className="text-xl font-burtons text-black dark:text-white">
               developedbymudit
             </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-xl dark:text-white"
+                  className="cursor-pointer text-xl text-gray-800 dark:text-white"
                 />
               </li>
               <li>
@@ -91,7 +91,7 @@ export default function Home() {
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Mudit Khanna
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
+            <h3 className="text-2xl py-2 md:text-3xl text-teal-800 dark:text-white">
               Full Stack Developer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-7xl mx-auto dark:text-gray-400">
@@ -155,13 +155,13 @@ export default function Home() {
               className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
              transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-white"
             >
-              <FaJava className="mx-auto text-8xl" />
+              <FaJava className="mx-auto text-8xl text-gray-800 " />
               <h3 className="text-xl font-medium pt-8 pb-2 text-teal-600">
                 Backend Technologies
               </h3>
-              <ul>
+              <ul className="text-gray-800">
                 <li className="flex items-center">
-                  <FaJava className="mr-3" /> Java EE
+                  <FaJava className="mr-3 " /> Java EE
                 </li>
                 <li className="flex items-center">
                   <FaJava className="mr-3" /> Java Servlets
@@ -203,11 +203,11 @@ export default function Home() {
               className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
              transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
             >
-              <LuFileCode2 className="mx-auto text-8xl" />
+              <LuFileCode2 className="mx-auto text-8xl text-gray-800" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Front End Technologies
               </h3>
-              <ul>
+              <ul className="text-gray-800">
                 <li className="flex items-center">
                   <SiReact className="mr-3" /> React
                 </li>
@@ -248,12 +248,12 @@ export default function Home() {
               className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
              transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
             >
-              <BsDatabaseFillGear className="mx-auto text-8xl " />
+              <BsDatabaseFillGear className="mx-auto text-8xl text-gray-800 " />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Database Management
               </h3>
 
-              <ul>
+              <ul className="text-gray-800">
                 <li className="flex items-center">
                   <SiMysql className="mr-3" /> MySQL
                 </li>
@@ -273,59 +273,63 @@ export default function Home() {
               className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
              transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
             >
-              <AiOutlineCloudServer className="mx-auto text-8xl " />
+              <AiOutlineCloudServer className="mx-auto text-8xl text-gray-800" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Cloud Services
               </h3>
-              <li className="flex items-center">
-                <FaAws className="mr-3" /> Amazon Web Services
-              </li>
-              <li className="flex items-center">
-                <SiAmazoniam className="mr-3" /> IAM
-              </li>
-              <li className="flex items-center">
-                <SiAmazonec2 className="mr-3" /> EC2 Instance
-              </li>
-              <li className="flex items-center">
-                <SiAmazons3 className="mr-3" /> S3 Bucket
-              </li>
-              <li className="flex items-center">
-                <SiAmazonsqs className="mr-3" /> Simple Queue Services
-              </li>
-              <li className="flex items-center">
-                <SiAmazoncloudwatch className="mr-3" /> CloudWatch
-              </li>
-              <li className="flex items-center">
-                <SiAwslambda className="mr-3" /> Lambda
-              </li>
+              <ul className="text-gray-800">
+                <li className="flex items-center">
+                  <FaAws className="mr-3" /> Amazon Web Services
+                </li>
+                <li className="flex items-center">
+                  <SiAmazoniam className="mr-3" /> IAM
+                </li>
+                <li className="flex items-center">
+                  <SiAmazonec2 className="mr-3" /> EC2 Instance
+                </li>
+                <li className="flex items-center">
+                  <SiAmazons3 className="mr-3" /> S3 Bucket
+                </li>
+                <li className="flex items-center">
+                  <SiAmazonsqs className="mr-3" /> Simple Queue Services
+                </li>
+                <li className="flex items-center">
+                  <SiAmazoncloudwatch className="mr-3" /> CloudWatch
+                </li>
+                <li className="flex items-center">
+                  <SiAwslambda className="mr-3" /> Lambda
+                </li>
+              </ul>
             </div>
 
             <div
               className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
              transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
             >
-              <LuList className="mx-auto text-8xl " />
+              <LuList className="mx-auto text-8xl text-gray-800" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Others
               </h3>
-              <li className="flex items-center">
-                <BsGit className="mr-3" /> Git
-              </li>
-              <li className="flex items-center">
-                <BsGithub className="mr-3" /> GitHub
-              </li>
-              <li className="flex items-center">
-                <BsFiletypeXml className="mr-3" /> XML
-              </li>
-              <li className="flex items-center">
-                <SiPostman className="mr-3" /> Postman
-              </li>
-              <li className="flex items-center">
-                <SiJsonwebtokens className="mr-3" /> JWT Authentication
-              </li>
-              <li className="flex items-center">
-                <SiNgrx className="mr-3" /> NgRx State Management
-              </li>
+              <ul className="text-gray-800">
+                <li className="flex items-center">
+                  <BsGit className="mr-3" /> Git
+                </li>
+                <li className="flex items-center">
+                  <BsGithub className="mr-3" /> GitHub
+                </li>
+                <li className="flex items-center">
+                  <BsFiletypeXml className="mr-3" /> XML
+                </li>
+                <li className="flex items-center">
+                  <SiPostman className="mr-3" /> Postman
+                </li>
+                <li className="flex items-center">
+                  <SiJsonwebtokens className="mr-3" /> JWT Authentication
+                </li>
+                <li className="flex items-center">
+                  <SiNgrx className="mr-3" /> NgRx State Management
+                </li>
+              </ul>
             </div>
           </div>
         </section>
