@@ -53,7 +53,7 @@ import Image from "next/image";
 import memoji from "../../public/my-memoji.png";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const handleEmailClick = () => {
     window.location.href = `mailto:muditkhanna998@gmail.com`;
