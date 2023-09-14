@@ -8,6 +8,8 @@ import {
   BsFillMoonStarsFill,
   BsGit,
   BsGithub,
+  BsGlobe,
+  BsSunFill,
   BsTypeH2,
 } from "react-icons/bs";
 import {
@@ -28,6 +30,7 @@ import {
   SiAwslambda,
   SiAxios,
   SiBootstrap,
+  SiChakraui,
   SiDotnet,
   SiExpress,
   SiHtml5,
@@ -41,16 +44,22 @@ import {
   SiPostman,
   SiReact,
   SiSpring,
+  SiSpringboot,
   SiSwagger,
   SiThymeleaf,
   SiTypescript,
+  SiVite,
 } from "react-icons/si";
 import { VscJson } from "react-icons/vsc";
 import { LuFileCode2, LuList } from "react-icons/lu";
 import { TiCss3 } from "react-icons/ti";
+import { DiNetbeans } from "react-icons/di";
 
 import Image from "next/image";
 import memoji from "../../public/my-memoji.png";
+import gameHub from "../../public/game_hub.png";
+import questionnora from "../../public/questionnora.png";
+import healthcare from "../../public/healthcare_1.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -69,10 +78,17 @@ export default function Home() {
             </h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-xl text-gray-800 dark:text-white"
-                />
+                {darkMode ? (
+                  <BsSunFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer text-xl text-gray-800 dark:text-white"
+                  />
+                ) : (
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer text-xl text-gray-800 dark:text-white"
+                  />
+                )}
               </li>
               <li>
                 <a
@@ -91,7 +107,7 @@ export default function Home() {
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Mudit Khanna
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl text-teal-800 dark:text-white">
+            <h3 className="text-2xl py-2 md:text-3xl text-teal-800 font-burtons dark:text-white">
               Full Stack Developer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-7xl mx-auto dark:text-gray-400">
@@ -106,12 +122,15 @@ export default function Home() {
               ExpressJS. Proficient in Git/Github for version control, he excels
               in crafting RESTful APIs and microservices with Swagger.
               Previously, he contributed to mission-critical web applications
-              for General Electric at Capgemini Solutions, aiding in inventory
-              management and billing. He also interned at Data Aces, focusing on
-              AWS Lambda migrations and microservices using CloudFormation
-              templates, before his tenure at OracleLens, where he played a
-              pivotal role in building a contract trading platform using Spring,
-              Angular, and JWT authentication.
+              for{" "}
+              <span className="text-teal-600 font-semibold">
+                General Electric at Capgemini Solutions
+              </span>
+              , aiding in inventory management and billing. He also interned at
+              Data Aces, focusing on AWS Lambda migrations and microservices
+              using CloudFormation templates, before his tenure at OracleLens,
+              where he played a pivotal role in building a contract trading
+              platform using Spring, Angular, and JWT authentication.
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
@@ -152,14 +171,14 @@ export default function Home() {
 
           <div className="lg:flex flex-wrap gap-14 justify-center">
             <div
-              className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
-             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-white"
+              className="text-center shadow-xl p-10 rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-black"
             >
-              <FaJava className="mx-auto text-8xl text-gray-800 " />
+              <FaJava className="mx-auto text-8xl text-gray-800 dark:text-white " />
               <h3 className="text-xl font-medium pt-8 pb-2 text-teal-600">
                 Backend Technologies
               </h3>
-              <ul className="text-gray-800">
+              <ul className="text-gray-800 dark:text-white">
                 <li className="flex items-center">
                   <FaJava className="mr-3 " /> Java EE
                 </li>
@@ -200,14 +219,14 @@ export default function Home() {
             </div>
 
             <div
-              className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
-             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
+              className="text-center shadow-xl p-10 rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-black"
             >
-              <LuFileCode2 className="mx-auto text-8xl text-gray-800" />
+              <LuFileCode2 className="mx-auto text-8xl text-gray-800 dark:text-white" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Front End Technologies
               </h3>
-              <ul className="text-gray-800">
+              <ul className="text-gray-800 dark:text-white">
                 <li className="flex items-center">
                   <SiReact className="mr-3" /> React
                 </li>
@@ -245,15 +264,15 @@ export default function Home() {
             </div>
 
             <div
-              className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
-             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
+              className="text-center shadow-xl p-10 rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-black"
             >
-              <BsDatabaseFillGear className="mx-auto text-8xl text-gray-800 " />
+              <BsDatabaseFillGear className="mx-auto text-8xl text-gray-800 dark:text-white" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Database Management
               </h3>
 
-              <ul className="text-gray-800">
+              <ul className="text-gray-800 dark:text-white">
                 <li className="flex items-center">
                   <SiMysql className="mr-3" /> MySQL
                 </li>
@@ -270,14 +289,14 @@ export default function Home() {
             </div>
 
             <div
-              className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
-             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
+              className="text-center shadow-xl p-10 rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-black"
             >
-              <AiOutlineCloudServer className="mx-auto text-8xl text-gray-800" />
+              <AiOutlineCloudServer className="mx-auto text-8xl text-gray-800 dark:text-white" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Cloud Services
               </h3>
-              <ul className="text-gray-800">
+              <ul className="text-gray-800 dark:text-white">
                 <li className="flex items-center">
                   <FaAws className="mr-3" /> Amazon Web Services
                 </li>
@@ -303,14 +322,14 @@ export default function Home() {
             </div>
 
             <div
-              className="text-center shadow-lg p-10 rounded-xl my-10 hover:scale-110
-             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-white"
+              className="text-center shadow-xl p-10 rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300  dark:bg-black"
             >
-              <LuList className="mx-auto text-8xl text-gray-800" />
+              <LuList className="mx-auto text-8xl text-gray-800 dark:text-white" />
               <h3 className="text-xl font-medium pt-10 pb-2 text-teal-600">
                 Others
               </h3>
-              <ul className="text-gray-800">
+              <ul className="text-gray-800 dark:text-white">
                 <li className="flex items-center">
                   <BsGit className="mr-3" /> Git
                 </li>
@@ -330,6 +349,159 @@ export default function Home() {
                   <SiNgrx className="mr-3" /> NgRx State Management
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section>
+          <div>
+            <h2 className="text-7xl py-2 mt-3 text-teal-600 font-medium md:text-7xl text-center">
+              <DiNetbeans className="mx-auto" />
+            </h2>
+          </div>
+
+          <div className="lg:flex flex-wrap gap-10 justify-center">
+            <div
+              className="max-w-xl shadow-xl rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-black "
+            >
+              <Image
+                src={gameHub}
+                width={800}
+                height={400}
+                alt="gamehub"
+                className="rounded-t-xl"
+              />
+
+              <div className="p-5">
+                <h3 className=" text-center text-xl font-medium pt-10 pb-2 text-teal-600">
+                  GameHub
+                </h3>
+                <h4 className="text-gray-800 font-mono dark:text-white">
+                  Platform that leverages the RAWG API to retrieve comprehensive
+                  information about games available across multiple platforms.
+                  The platform offers users the ability to refine their search
+                  results by applying genre filters and includes a seamless dark
+                  mode toggle feature for an enhanced user experience.
+                </h4>
+                <div className="flex items-center mt-3">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200">
+                    Tech Stack:{" "}
+                  </h4>
+
+                  <SiReact className="text-gray-800 mr-2 dark:text-white" />
+                  <SiChakraui className="text-gray-800 mr-2 dark:text-white" />
+                  <SiVite className="text-gray-800 mr-2 dark:text-white" />
+                  <AiFillGithub className="text-gray-800 mr-2 dark:text-white" />
+                </div>
+                <div className="flex items-center">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200">
+                    Links:{" "}
+                  </h4>
+                  <a
+                    href="https://game-hub-starter-mxwmkf7gs-muditkhanna98.vercel.app/"
+                    target="_blank"
+                  >
+                    <BsGlobe className="text-gray-800 mr-2 dark:text-white" />
+                  </a>
+                  <a
+                    href="https://github.com/muditkhanna98/game-hub-starter"
+                    target="_blank"
+                  >
+                    <AiFillGithub className="text-gray-800 dark:text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="max-w-xl shadow-xl rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-black "
+            >
+              <Image
+                src={questionnora}
+                width={800}
+                height={400}
+                className="rounded-t-xl"
+                alt="gamehub"
+              />
+
+              <div className="p-5">
+                <h3 className=" text-center text-xl font-medium pt-10 pb-2 text-teal-600">
+                  Questionnora
+                </h3>
+                <h4 className="text-gray-800 font-mono dark:text-white">
+                  MVC application platform that enables users to log in, access
+                  questions posted by other users, and submit answers to those
+                  inquiries.
+                </h4>
+                <div className="flex items-center mt-3">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200 ">
+                    Tech Stack:{" "}
+                  </h4>
+
+                  <SiDotnet className="text-gray-800 mr-2 dark:text-white" />
+                  <AiFillGithub className="text-gray-800 mr-2 dark:text-white" />
+                </div>
+                <div className="flex items-center">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200">
+                    Links:{" "}
+                  </h4>
+                  <a
+                    href="https://github.com/muditkhanna98/Questionora"
+                    target="_blank"
+                  >
+                    <AiFillGithub className="text-gray-800 dark:text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="max-w-xl shadow-xl  rounded-xl my-10 hover:scale-110
+             transform transition-transform duration-300 ease-in-out hover:shadow-teal-300 dark:bg-black "
+            >
+              <Image
+                src={healthcare}
+                width={800}
+                height={400}
+                alt="gamehub"
+                className="rounded-t-xl"
+              />
+
+              <div className="p-5">
+                <h3 className=" text-center text-xl font-medium pt-10 pb-2 text-teal-600">
+                  HealthCare Lab
+                </h3>
+                <h4 className="text-gray-800 font-mono dark:text-white">
+                  Versatile platform that streamlines the scheduling of
+                  laboratory appointments for patients, facilitates physicians
+                  in organizing test schedules, and empowers technicians to
+                  seamlessly upload and manage their test results
+                </h4>
+                <div className="flex items-center mt-3">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200 ">
+                    Tech Stack:{" "}
+                  </h4>
+
+                  <SiAngular className="text-gray-800 mr-2 dark:text-white" />
+                  <SiBootstrap className="text-gray-800 mr-2 dark:text-white" />
+                  <SiSpring className="text-gray-800 mr-2 dark:text-white" />
+                  <AiFillGithub className="text-gray-800 mr-2 dark:text-white" />
+                </div>
+                <div className="flex items-center">
+                  <h4 className="text-gray-500 mr-3 dark:text-gray-200">
+                    Links:{" "}
+                  </h4>
+
+                  <a
+                    href="https://github.com/muditkhanna98/laboratory-management-app"
+                    target="_blank"
+                  >
+                    <AiFillGithub className="text-gray-800 dark:text-white" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
